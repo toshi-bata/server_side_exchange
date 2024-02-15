@@ -28,8 +28,22 @@ bool ExProcess::Init()
     if (!A3DSDKLoadLibrary(""))
         return false;
 #else
-    if (!A3DSDKLoadLibrary(_T("")))
+
+    wchar_t bin_dir[2048];
+#ifdef _DEBUG
+    std::wstring buffer;
+    buffer.resize(2048);
+    if (GetEnvironmentVariable(L"HEXCHANGE_INSTALL_DIR", &buffer[0], static_cast<DWORD>(buffer.size())))
+    {
+        swprintf(bin_dir, _T("%s/bin/win64_v142"), buffer.data());
+    }
+#else
+    swprintf(bin_dir, _T(""));
+#endif
+    wprintf(_T("Exchange bin dir=\"%s\"\n"), bin_dir);
+    if (!A3DSDKLoadLibrary(bin_dir))
         return false;
+
 #endif
     iRet = A3DLicPutUnifiedLicense(HOOPS_LICENSE);
     if (iRet != A3D_SUCCESS)

@@ -147,7 +147,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(LIBMICRO_INSTALL_DIR)\x86_64\VS2019\Release-static;$(HCOMMUNICATOR_INSTALL_DIR)\authoring\libconverter\lib\win64</AdditionalLibraryDirectories>
       <AdditionalDependencies>libmicrohttpd.lib;libconverter.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>

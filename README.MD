@@ -5,11 +5,11 @@ Farthermore, by keeping imported model with Exchange, Exchange APIs can be calle
 
 ## Dependencies
 ### SDKs in use (version)
-* HOOPS Communicator (2023_U1)
-* HOOPS Exchange (2023_U1)
+* HOOPS Communicator (2024.1.0)
+* HOOPS Exchange (2024.1.0)
 
 ### Third paty module
-* libmicrohttpd (0.9.76)
+* libmicrohttpd (1.0.0)
   https://ftp.gnu.org/gnu/libmicrohttpd/
 
 ### Tested server platforms
@@ -19,17 +19,17 @@ Farthermore, by keeping imported model with Exchange, Exchange APIs can be calle
 
 ## Setup
 ### Demo folders
- + ..
-   + server_side_exchange
-     + ExServer
-       + Makefile (for Linux / MacOS)
-       + VS2019_ExServer.bat (for Windows)
-     + main.html
-     + js
-       + main.js
-     + HttpServer.js
-     + package.json
-   + src (copy src folder here from <Communicator SDK>\web_viewer)
+ \+ ...
+   \+ server_side_exchange
+     \+ ExServer
+       \+ Makefile (for Linux / MacOS)
+       \+ VS2019_ExServer.bat (for Windows)
+     \+ main.html
+     \+ js
+       \+ main.js
+     \+ HttpServer.js
+     \+ package.json
+   \+ src (copy src folder here from <Communicator SDK>\web_viewer)
 
 ### Build ExServer
 ExServer is a server side console application which is using HOOPS Exchange and HC libconverter. 
