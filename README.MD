@@ -1,7 +1,7 @@
 # Server side Exchange
-This sample illustrates how to create an interactive 3D model Web viewer from uploading a CAD file to visualization.
-Server side loads a CAD file using HOOPS Exchange and exports SC model using libconverter of HOOPS Communicator. By using Exchange and libconverter separately instead of HC Converter, import options and advanced features of Exchange which are not supported by Converter can be used.
-Farthermore, by keeping imported model with Exchange, Exchange APIs can be called from client side interactively.
+This sample illustrates how to create an interactive 3D model Web viewer from uploading a CAD file to visualization.<br>
+Server side loads a CAD file using HOOPS Exchange and exports SC model using libconverter of HOOPS Communicator. By using Exchange and libconverter separately instead of HC Converter, import options and advanced features of Exchange which are not supported by Converter can be used.<br>
+Farthermore, by keeping imported model with Exchange, Exchange APIs can be called from client side interactively.<br>
 
 ## Dependencies
 ### SDKs in use (version)
