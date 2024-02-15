@@ -21,14 +21,14 @@ Farthermore, by keeping imported model with Exchange, Exchange APIs can be calle
 ### Demo folders
 &emsp;+ server_side_exchange<br>
 &emsp;&emsp;+ ExServer<br>
-&emsp;&emsp;&emsp;\+ Makefile (for Linux / MacOS)<br>
-&emsp;&emsp;&emsp;\+ VS2019_ExServer.bat (for Windows)<br>
-&emsp;&emsp;\+ main.html<br>
-&emsp;&emsp;\+ js<br>
-&emsp;&emsp;&emsp;\+ main.js<br>
-&emsp;&emsp;\+ HttpServer.js<br>
-&emsp;&emsp;\+ package.json<br>
-&emsp;\+ src (copy src folder here from <Communicator SDK>\web_viewer)<br>
+&emsp;&emsp;&emsp;+ Makefile (for Linux / MacOS)<br>
+&emsp;&emsp;&emsp;+ VS2019_ExServer.bat (for Windows)<br>
+&emsp;&emsp;+ main.html<br>
+&emsp;&emsp;+ js<br>
+&emsp;&emsp;&emsp;+ main.js<br>
+&emsp;&emsp;+ HttpServer.js<br>
+&emsp;&emsp;+ package.json<br>
+&emsp;+ src (copy src folder here from <Communicator SDK>\web_viewer)<br>
 
 ### Build ExServer
 ExServer is a server side console application which is using HOOPS Exchange and HC libconverter. <br>
