@@ -19,38 +19,38 @@ Farthermore, by keeping imported model with Exchange, Exchange APIs can be calle
 
 ## Setup
 ### Demo folders
- \+ ...
-   \+ server_side_exchange
-     \+ ExServer
-       \+ Makefile (for Linux / MacOS)
-       \+ VS2019_ExServer.bat (for Windows)
-     \+ main.html
-     \+ js
-       \+ main.js
-     \+ HttpServer.js
-     \+ package.json
-   \+ src (copy src folder here from <Communicator SDK>\web_viewer)
+ \+ ...<br>
+   \+ server_side_exchange<br>
+     \+ ExServer<br>
+       \+ Makefile (for Linux / MacOS)<br>
+       \+ VS2019_ExServer.bat (for Windows)<br>
+     \+ main.html<br>
+     \+ js<br>
+       \+ main.js<br>
+     \+ HttpServer.js<br>
+     \+ package.json<br>
+   \+ src (copy src folder here from <Communicator SDK>\web_viewer)<br>
 
 ### Build ExServer
-ExServer is a server side console application which is using HOOPS Exchange and HC libconverter. 
+ExServer is a server side console application which is using HOOPS Exchange and HC libconverter. <br>
 1. Unzip HOOPS Exchange SDK and locate a valid hoops_license.h in `includ/` 
 2. Unzip HOOPS Communicator SDK and locate a valid hoops_license.h in `authoring/libconverter/include/`
 
-Linux / MacOS
+Linux / MacOS<br>
 3. Unzip libmicrohttpd and install with root user
     `./configure && make && make install`
 4. Edit ExServer/Makefile according to your environment
 5. Set library path
-  Linux
+  Linux<br>
     `export LD_LIBRARY_PATH=/usr/local/lib:/path/to//HOOPS_Communicator/authoring/converter/bin/linux64`
-  MacOS
+  MacOS<br>
     `export DYLD_LIBRARY_PATH=/usr/local/lib:/path/to/HOOPS_Communicator/authoring/converter/bin/macos`
 6. Set enviroment valiables
     `export EX_SERVER_WORKING_DIR=/path/to/temp/folder`
     `export SC_MODELS_DIR=/path/to/sc_models/folder`
 7. Build `sudo make`
 
-Windows
+Windows<br>
 3. Unzip libconverter SDK
 4. Register the following enviroment valiables
     Name: EX_SERVER_WORKING_DIR   Value: path¥to¥temp¥folder
