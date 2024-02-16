@@ -52,8 +52,8 @@ ExServer is a server side console application which is using HOOPS Exchange and 
 2. Unzip HOOPS Communicator SDK and locate a valid hoops_license.h in `authoring/libconverter/include/`
 3. Unzip libconverter SDK
 4. Register the following enviroment valiables<br>
-    Name: EX_SERVER_WORKING_DIR   Value: path¥to¥temp¥folder<br>
-    Name: SC_MODELS_DIR           Value: path¥to¥sc_models¥folder<br>
+    Name: `EX_SERVER_WORKING_DIR`&emsp;Value: `path¥to¥temp¥folder`<br>
+    Name: `SC_MODELS_DIR`&emsp;Value: `path¥to¥sc_models¥folder`<br>
 5. Edit ExServer¥VS2019_ExServer.bat accoording to your environment and open ExServer.sln using the bat file
 6. Build the solution
      
