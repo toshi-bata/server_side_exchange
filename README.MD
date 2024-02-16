@@ -42,13 +42,10 @@ ExServer is a server side console application which is using HOOPS Exchange and 
 4. Edit ExServer/Makefile according to your environment
 5. Set library path<br>
   Linux<br>
-    `export LD_LIBRARY_PATH=/usr/local/lib:/path/to//HOOPS_Communicator/authoring/converter/bin/linux64`<br>
+    `export LD_LIBRARY_PATH=/usr/local/lib:/path/to/HOOPS_Communicator/authoring/converter/bin/linux64`<br>
   MacOS<br>
     `export DYLD_LIBRARY_PATH=/usr/local/lib:/path/to/HOOPS_Communicator/authoring/converter/bin/macos`<br>
-6. Set enviroment valiables
-    `export EX_SERVER_WORKING_DIR=/path/to/temp/folder`
-    `export SC_MODELS_DIR=/path/to/sc_models/folder`
-7. Build `sudo make`
+6. Build `sudo make`
 
 #### Windows
 1. Unzip HOOPS Exchange SDK and locate a valid hoops_license.h in `includ/` 
@@ -66,10 +63,13 @@ ExServer is a server side console application which is using HOOPS Exchange and 
     `npm install`<br>
     `npm start`<br>
 2. Start Communicator SC server (<Communicator SDK>/quick_start/start_server)
-3. Start ExServer (giving a port number in command line argument)<br>
+3. Set enviroment valiables<br>
+    `export EX_SERVER_WORKING_DIR=/path/to/temp/folder`<br>
+    `export SC_MODELS_DIR=/path/to/sc_models/folder`<br>
+4. Start ExServer (giving a port number in command line argument)<br>
     Windows: `ExServer 8888`<br>
     Linux/MacOS: `./ExServer 8888`<br>
-4. Open the main.html with server's port number (using Chrome)<br>
+5. Open the main.html with server's port number (using Chrome)<br>
     `http://localhost:8000/main.html?port=8888`
     
 
