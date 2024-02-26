@@ -27,7 +27,8 @@ LDLIBS = -ldl -lstdc++ \
 	 -L$(PATH_TO_LIBMHD_LIBS) \
 	 -lmicrohttpd \
 	 -L$(PATH_TO_LIBCONVERTER) \
-	 -lconverter
+	 -lconverter \
+	 -lstdc++fs
 
 $(BIN): $(OBJS)
 	$(CC) $(PATH_TO_INCLUDES) $(OBJS) -o $(BIN) $(LDLIBS)
