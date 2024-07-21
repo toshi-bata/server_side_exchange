@@ -1,3 +1,6 @@
+import { WebViewer, RendererType, Color } from "@hoops/web-viewer";
+import { ServerCaller } from "/js/ServerCaller.js";
+var callbacks;
 class Main {
     constructor() {
         this._viewer;
@@ -47,16 +50,17 @@ class Main {
                 endpoint = "wss://" + window.location.hostname + "/wsproxy/11182";
             }
         }
-        this._viewer = new Communicator.WebViewer({
+        this._viewer = new WebViewer({
             containerId: "container",
             model: "_empty",
             endpointUri: endpoint,
-            rendererType: Communicator.RendererType.Client
+            rendererType: RendererType.Client,
+            enginePath: "../../web_viewer"
         });
 
         this._viewer.setCallbacks({
             sceneReady: () => {
-                this._viewer.view.setBackgroundColor(new Communicator.Color(255, 255, 255), new Communicator.Color(230, 204, 179));
+                this._viewer.view.setBackgroundColor(new Color(255, 255, 255), new Color(230, 204, 179));
             },
             timeout: () => {
                 this._serverCaller.CallServerPost("Clear");
@@ -276,19 +280,19 @@ class Main {
 
                 if ("FACE" == params.entityType) {
                     typeCount = [0, 0, 0, 0, 0, 0];
-                    typeColors.push(new Communicator.Color(0, 0, 255));
-                    typeColors.push(new Communicator.Color(0, 255, 255));
-                    typeColors.push(new Communicator.Color(0, 255, 0));
-                    typeColors.push(new Communicator.Color(255, 255, 0));
-                    typeColors.push(new Communicator.Color(255, 128, 0));
-                    typeColors.push(new Communicator.Color(255, 0, 0));
+                    typeColors.push(new Color(0, 0, 255));
+                    typeColors.push(new Color(0, 255, 255));
+                    typeColors.push(new Color(0, 255, 0));
+                    typeColors.push(new Color(255, 255, 0));
+                    typeColors.push(new Color(255, 128, 0));
+                    typeColors.push(new Color(255, 0, 0));
                 }
                 else if ("EDGE" == params.entityType) {
                     typeCount = [0, 0, 0, 0];
-                    typeColors.push(new Communicator.Color(0, 0, 255));
-                    typeColors.push(new Communicator.Color(0, 255, 0));
-                    typeColors.push(new Communicator.Color(255, 255, 0));
-                    typeColors.push(new Communicator.Color(255, 0, 0));
+                    typeColors.push(new Color(0, 0, 255));
+                    typeColors.push(new Color(0, 255, 0));
+                    typeColors.push(new Color(255, 255, 0));
+                    typeColors.push(new Color(255, 0, 0));
                 }
 
                 // Set colors by entity type
@@ -392,7 +396,7 @@ class Main {
                                 const faceId = bodyHoles[j + 2 + k];
                                 roHole.faceIds.push(faceId);
                                 // Change round hole faces' color
-                                promiseArr.push(this._viewer.model.setNodeFaceColor(node, faceId, new Communicator.Color(0, 255, 255)));
+                                promiseArr.push(this._viewer.model.setNodeFaceColor(node, faceId, new Color(0, 255, 255)));
                             }
 
                             j += entityCnt + 2;
@@ -619,3 +623,17 @@ class Callbacks {
         });
     }
 }
+
+function create_UUID(){
+    var dt = new Date().getTime();
+    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = (dt + Math.random()*16)%16 | 0;
+        dt = Math.floor(dt/16);
+        return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+    });
+    return uuid;
+}
+
+export {
+    Main
+};

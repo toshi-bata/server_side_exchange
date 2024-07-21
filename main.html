@@ -13,16 +13,24 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="../src/js/hoops_web_viewer.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/ServerCaller.js"></script>
+        <script type="importmap">
+            {
+              "imports": {
+                "@hoops/web-viewer": "../web_viewer/hoops-web-viewer.mjs"
+              }
+            }
+        </script>
+        <script type="module">
+            import {WebViewer} from "@hoops/web-viewer";
+            WebViewer.defaultEnginePath = "..";
+        </script>
         
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
        
-        <script type="text/javascript">
+        <script type="module">
+            import { Main } from "/js/main.js";
             var main;
-            var callbacks;
             let viewer;
             window.onload = function () {
                 main = new Main();
@@ -50,17 +58,6 @@
                     return result[name];
                 }
             }
-
-            function create_UUID(){
-               var dt = new Date().getTime();
-               var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-                   var r = (dt + Math.random()*16)%16 | 0;
-                   dt = Math.floor(dt/16);
-                   return (c=='x' ? r :(r&0x3|0x8)).toString(16);
-               });
-               return uuid;
-           }
-
         </script>
     </head>
     <body>
