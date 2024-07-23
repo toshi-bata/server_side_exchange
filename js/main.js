@@ -55,7 +55,7 @@ class Main {
             model: "_empty",
             endpointUri: endpoint,
             rendererType: RendererType.Client,
-            enginePath: "../../web_viewer"
+            enginePath: "../"
         });
 
         this._viewer.setCallbacks({

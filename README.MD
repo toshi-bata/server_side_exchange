@@ -15,7 +15,7 @@ https://forum.techsoft3d.com/t/how-hoops-communicator-can-use-server-side-exchan
   https://ftp.gnu.org/gnu/libmicrohttpd/
 
 ### Tested server platforms
-* Ubuntu server 20.04 LTS AWE EC2 instance
+* Ubuntu server 24.04 LTS AWE EC2 instance
 * Windows 11
 * MacOS 12.4
 
@@ -30,7 +30,10 @@ https://forum.techsoft3d.com/t/how-hoops-communicator-can-use-server-side-exchan
 &emsp;&emsp;&emsp;+ main.js<br>
 &emsp;&emsp;+ HttpServer.js<br>
 &emsp;&emsp;+ package.json<br>
-&emsp;+ web_viewer (copy web_viewer folder here from Communicator SDK)<br>
+&emsp;&emsp;+ demo-app (copy demo-app folder here from Communicator_SDK/web_viewer)<br>
+&emsp;&emsp;+ hoops-web-viewer.mjs (copy hoops-web-viewer.mjs file here from Communicator_SDK/web_viewer)<br>
+&emsp;&emsp;+ engine.esm.js (copy engine.esm.js file here from Communicator_SDK/web_viewer)<br>
+&emsp;&emsp;+ engine.esm.wasm (copy engine.esm.wasm file here from Communicator_SDK/web_viewer)<br>
 
 ### Build ExServer
 ExServer is a server side console application which is using HOOPS Exchange and HC libconverter. <br>
