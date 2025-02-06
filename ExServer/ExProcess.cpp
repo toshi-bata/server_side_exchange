@@ -11,6 +11,7 @@
 #include "ClassifyEntityVisitor.h"
 #include "FeatureRecognitionVisitor.h"
 #include <iterator>
+#include "hoops_license.h"
 
 ExProcess::ExProcess()
 {

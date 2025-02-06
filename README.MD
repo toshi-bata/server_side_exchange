@@ -7,8 +7,8 @@ https://forum.techsoft3d.com/t/how-hoops-communicator-can-use-server-side-exchan
 
 ## Dependencies
 ### SDKs in use (version)
-* HOOPS Communicator (2024.4.0)
-* HOOPS Exchange (2024.4.0)
+* HOOPS Communicator (2025.1.0)
+* HOOPS Exchange (2025.1.0)
 
 ### Third paty module
 * libmicrohttpd (1.0.0)<br>
