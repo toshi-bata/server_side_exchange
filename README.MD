@@ -1,14 +1,14 @@
 # Server side Exchange
-This sample illustrates how to create an interactive 3D model Web viewer from uploading a CAD file to visualization.<br>
-Server side loads a CAD file using HOOPS Exchange and exports SC model using libconverter of HOOPS Communicator. By using Exchange and libconverter separately instead of HC Converter, import options and advanced features of Exchange which are not supported by Converter can be used.<br>
-Farthermore, by keeping imported model with Exchange, Exchange APIs can be called from client side interactively.<br>
-This sample was developed for the following article of Tech Soft 3D Forum:<br>
+This sample demonstrates how to create an interactive 3D model web viewer, from uploading a CAD file to visualizing the model.<br>
+On the server side, a CAD file is loaded using HOOPS Exchange, and an SC model is exported using the libconverter component of HOOPS Communicator. By using Exchange and libconverter separately—instead of the integrated HC Converter—you can take advantage of import options and advanced features in Exchange that are not supported by the Converter.<br>
+Furthermore, by retaining the imported model in Exchange, it becomes possible to call Exchange APIs interactively from the client side.<br>
+This sample was developed for the following article on the Tech Soft 3D Forum:<br>
 https://forum.techsoft3d.com/t/how-hoops-communicator-can-use-server-side-exchange-processes/1841
 
 ## Dependencies
 ### SDKs in use (version)
-* HOOPS Communicator (2025.1.0)
-* HOOPS Exchange (2025.1.0)
+* HOOPS Communicator (2025.2.0)
+* HOOPS Exchange (2025.2.0)
 
 ### Third paty module
 * libmicrohttpd (1.0.0)<br>
@@ -30,10 +30,9 @@ https://forum.techsoft3d.com/t/how-hoops-communicator-can-use-server-side-exchan
 &emsp;&emsp;&emsp;+ main.js<br>
 &emsp;&emsp;+ HttpServer.js<br>
 &emsp;&emsp;+ package.json<br>
-&emsp;&emsp;+ demo-app (copy demo-app folder here from Communicator_SDK/web_viewer)<br>
-&emsp;&emsp;+ hoops-web-viewer.mjs (copy hoops-web-viewer.mjs file here from Communicator_SDK/web_viewer)<br>
-&emsp;&emsp;+ engine.esm.js (copy engine.esm.js file here from Communicator_SDK/web_viewer)<br>
-&emsp;&emsp;+ engine.esm.wasm (copy engine.esm.wasm file here from Communicator_SDK/web_viewer)<br>
+&emsp;+ demo-app (copy demo-app folder here from Communicator_SDK/web_viewer)<br>
+&emsp;+ hoops-web-viewer.mjs (copy hoops-web-viewer.mjs file here from Communicator_SDK/web_viewer)<br>
+&emsp;+ engine.esm.wasm (copy engine.esm.wasm file here from Communicator_SDK/web_viewer)<br>
 
 ### Build ExServer
 ExServer is a server side console application which is using HOOPS Exchange and HC libconverter. <br>
